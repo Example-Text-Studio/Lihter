@@ -1,0 +1,114 @@
+name: GameCI 🎮
+
+on:
+#  push:
+#    branches: [develop]
+#    paths: ['Assets/**', 'Packages/**', 'ProjectSettings/**']
+#  pull_request:
+#    types: [opened]
+#    branches: [develop]
+#    paths: ['Assets/**', 'Packages/**', 'ProjectSettings/**']
+  release: 
+    types: [published]
+  workflow_dispatch: {}
+
+jobs:
+  tests:
+    name: Test in ${{ matrix.testMode }} ⏱️
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        testMode:
+          - EditMode
+          - PlayMode
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+      - name: Restore LFS cache
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
+      - name: Restore Library cache
+        uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-test-${{ matrix.targetPlatform }}
+          restore-keys: Library-test-
+
+      - name: Run Unit Tests
+        uses: game-ci/unity-test-runner@v2
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          testMode: ${{ matrix.testMode }}
+          checkName: ${{ matrix.testMode }} test results
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+
+  build:
+    name: Build for ${{ matrix.targetPlatform }} 🖥️
+    runs-on: ubuntu-22.04
+    needs: tests
+    if: github.event_name != 'push'
+    outputs:
+      buildVersion: ${{ steps.build.outputs.buildVersion }}
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform:
+          - StandaloneWindows64
+          - StandaloneLinux64
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+      - name: Restore LFS cache
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard
+      - name: Restore Library cache
+        uses: actions/cache@v3
+        with:
+          path: Library
+          key: Library-build-${{ matrix.targetPlatform }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-build-${{ matrix.targetPlatform }}-
+            Library-build-
+      - name: Build Project
+        id: build
+        uses: game-ci/unity-builder@v2
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: ${{ matrix.targetPlatform }}
+          buildName: ${{ secrets.PACKAGE_NAME }}
+
+      - name: Save Build
+        uses: actions/upload-artifact@v2
+        with:
+          name: Build for ${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
+          if-no-files-found: error
