@@ -1,13 +1,13 @@
-name: Enchancement
-description: Propose enchancement
-title: "[Enchancement] "
-labels: [ "enchancement" ]
+name: Enhancement
+description: Propose enhancement
+title: "[Enhancement] "
+labels: [ "enhancement" ]
 body:
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: Description of what the enchancement is.
+      description: Description of what the enhancement is.
       placeholder: eg. It would be cool if player would ...
     validations:
       required: true
@@ -15,5 +15,6 @@ body:
     id: tip
     attributes:
       value: |
+        ---
         Any additional context shall be provided in comments to this bug report.
         Reference feature issue, eg. #10, or you can add code snippet or screenshots.

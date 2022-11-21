@@ -15,5 +15,6 @@ body:
     id: tip
     attributes:
       value: |
+        ---
         Any additional context shall be provided in comments to this bug report.
         Reference feature issue, eg. #10, or you can add code snippet or screenshots.
