@@ -1,0 +1,43 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug] "
+labels: [ "bug" ]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe in detail what went wrong.
+      placeholder: eg. Jumping broke ...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: GIve step by step explanation what you did to encounter this bug.
+      placeholder: |
+        1. 
+        2. 
+        3. 
+        ...
+      render: markdown
+    validations:
+      required: true
+  - type: dropdown
+    id: os-type
+    attributes:
+      label: On what system bug occured?
+      multiple: true
+      options:
+        - Windows
+        - Linux
+        - MacOS
+    validations:
+      required: false
+  - type: markdown
+    id: tip
+    attributes:
+      value: |
+        Any additional context shall be provided in comments to this bug report.
+        Reference feature issue, eg. #10, or you can add code snippet or screenshots.

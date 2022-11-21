@@ -1,0 +1,19 @@
+name: Feature
+description: A feature which may or may not be implemented
+title: "[Feature] "
+labels: [ "feature" ]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Description of what the feature is.
+      placeholder: eg. Player could break crates to get items ...
+    validations:
+      required: true
+  - type: markdown
+    id: tip
+    attributes:
+      value: |
+        Any additional context shall be provided in comments to this bug report.
+        Reference feature issue, eg. #10, or you can add code snippet or screenshots.
