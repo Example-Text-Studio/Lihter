@@ -105,211 +105,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: umarly_chod_dol_0
+      name: undead_walk_down_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 989
-        height: 556
+        width: 960
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4270448548d412148bee768cfba09921
-      internalID: -1646107918
+      spriteID: f55186593f7325a4080542a4b6ee26ea
+      internalID: -1440398005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: umarly_chod_dol_1
+      name: undead_walk_down_1
       rect:
         serializedVersion: 2
-        x: 989
+        x: 960
         y: 0
-        width: 989
-        height: 556
+        width: 960
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abb32ae816d688a449608948788ff492
-      internalID: 325807257
+      spriteID: 8bbf48d58f27ef94e984ab33dbc8bdc9
+      internalID: -66848741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: umarly_chod_dol_2
+      name: undead_walk_down_2
       rect:
         serializedVersion: 2
-        x: 1978
+        x: 1920
         y: 0
-        width: 989
-        height: 556
+        width: 960
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 471701660119052479bd11a743c3e7cb
-      internalID: -384394117
+      spriteID: d62cae32ce393b149b2e4f5644e0f9af
+      internalID: 317720316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: umarly_chod_dol_3
+      name: undead_walk_down_3
       rect:
         serializedVersion: 2
-        x: 2967
+        x: 2880
         y: 0
-        width: 989
-        height: 556
+        width: 960
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cd9b6ed1f2464143b5bf3acecc3c368
-      internalID: 288337294
+      spriteID: d1afd738b53ccba4a97d56da463f24cd
+      internalID: -1715614652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: umarly_chod_dol_4
+      name: undead_walk_down_4
       rect:
         serializedVersion: 2
-        x: 3956
+        x: 3840
         y: 0
-        width: 989
-        height: 556
+        width: 960
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f51371449f25cfb4eab3601479c09641
-      internalID: -117321711
+      spriteID: 2edfa81be75cfde499c30c7f9f38568a
+      internalID: 829852592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: umarly_chod_dol_5
+      name: undead_walk_down_5
       rect:
         serializedVersion: 2
-        x: 4945
+        x: 4800
         y: 0
-        width: 989
-        height: 556
+        width: 960
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f123a63fbf9edb42bd099d9cefa874c
-      internalID: 801982925
+      spriteID: 6b5715e327fcd724daee0a15abd5a33a
+      internalID: 656725895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: umarly_chod_dol_6
+      name: undead_walk_down_6
       rect:
         serializedVersion: 2
-        x: 5934
+        x: 5760
         y: 0
-        width: 989
-        height: 556
+        width: 960
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f0ed597f93e7bf409b984f6518acd5b
-      internalID: 1764901654
+      spriteID: 58bb83f96a778c148bef7c3103f59be1
+      internalID: 588178967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: umarly_chod_dol_7
+      name: undead_walk_down_7
       rect:
         serializedVersion: 2
-        x: 6923
+        x: 6720
         y: 0
-        width: 989
-        height: 556
+        width: 960
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76b814304c85bc64eb82e0b9ccb577e3
-      internalID: -432024622
+      spriteID: 18fbdb93582665f45bf488762c776b76
+      internalID: 1783660539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: umarly_chod_dol_8
+      name: undead_walk_down_8
       rect:
         serializedVersion: 2
-        x: 7912
+        x: 7680
         y: 0
-        width: 989
-        height: 556
+        width: 960
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a014fba05043e54a9c2f011b977636c
-      internalID: 2101206109
+      spriteID: 2b13c35dd638c69419cf4c67f6535233
+      internalID: -282523827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: umarly_chod_dol_9
+      name: undead_walk_down_9
       rect:
         serializedVersion: 2
-        x: 8901
+        x: 8640
         y: 0
-        width: 989
-        height: 556
+        width: 960
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1219f71ae5fa924eaefc1645db9be06
-      internalID: -647791505
+      spriteID: 9eb2ebb047875f24b8995ec34e95e97c
+      internalID: 350116490
       vertices: []
       indices: 
       edges: []
@@ -325,16 +325,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      umarly_chod_dol_2: -1646107918
-      umarly_chod_dol_1: 325807257
-      umarly_chod_dol_7: -384394117
-      umarly_chod_dol_8: 288337294
-      umarly_chod_dol_6: -117321711
-      umarly_chod_dol_4: 801982925
-      umarly_chod_dol_0: 1764901654
-      umarly_chod_dol_9: -432024622
-      umarly_chod_dol_5: 2101206109
-      umarly_chod_dol_3: -647791505
+      undead_walk_down_9: 350116490
+      undead_walk_down_7: 1783660539
+      undead_walk_down_4: 829852592
+      undead_walk_down_0: -1440398005
+      undead_walk_down_5: 656725895
+      undead_walk_down_8: -282523827
+      undead_walk_down_3: -1715614652
+      undead_walk_down_6: 588178967
+      undead_walk_down_2: 317720316
+      undead_walk_down_1: -66848741
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
