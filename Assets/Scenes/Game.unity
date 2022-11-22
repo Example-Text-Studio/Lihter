@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc66be5e2cc213f4bb319ec7d5a93c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 60
+  movementSpeed: 50
 --- !u!4 &1618312230
 Transform:
   m_ObjectHideFlags: 0
@@ -519,7 +519,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 9.616695, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
