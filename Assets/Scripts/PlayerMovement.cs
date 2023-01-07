@@ -1,47 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Lihter
 {
     public class PlayerMovement : MonoBehaviour
     {
-        private Rigidbody2D rb;
-        private Animator anim;
-        public float movementSpeed;
-        private Vector2 _movementInput;
+        [SerializeField] private new Rigidbody2D rigidbody;
+        [SerializeField] private Animator animator;
+        [SerializeField] private float movementSpeed;
 
-        private void Awake() 
-        {
-            rb = GetComponent<Rigidbody2D>();
-            anim = GetComponent<Animator>();
-        }
+        private bool IsMoving { get; set; }
 
-        private void Update() 
+        private Vector2 _direction;
+
+        // Cached animations
+        private static readonly int AnimMovementX = Animator.StringToHash("MovementX");
+        private static readonly int AnimMovementY = Animator.StringToHash("MovementY");
+
+        private void Update()
         {
-            Move();
             Animate();
         }
 
-        private void Move() 
+        private void FixedUpdate()
         {
-            float horizontal = Input.GetAxisRaw("Horizontal");
-            float vertical = Input.GetAxisRaw("Vertical");
-
-            if(horizontal == 0 && vertical == 0)
-            {
-                rb.velocity = new Vector2(0,0);
-                return;
-            }
-
-            _movementInput = new Vector2(horizontal,vertical);
-            rb.velocity = _movementInput * movementSpeed * Time.fixedDeltaTime;
+            // Apply movement
+            rigidbody.velocity = _direction;
+            rigidbody.velocity *= IsMoving ? movementSpeed * Time.fixedDeltaTime : 1;
         }
 
-        private void Animate() 
+        public void InputActionMove(InputAction.CallbackContext context)
         {
-            anim.SetFloat("MovementX",_movementInput.x);
-            anim.SetFloat("MovementY",_movementInput.y);
+            _direction = context.ReadValue<Vector2>();
+            IsMoving = _direction != Vector2.zero;
+        }
+
+        private void Animate()
+        {
+            if (IsMoving)
+            {
+                animator.SetFloat(AnimMovementX, _direction.x);
+                animator.SetFloat(AnimMovementY, _direction.y);
+            }
         }
     }
 }
