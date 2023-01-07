@@ -1,5 +1,5 @@
 {
-    "name": "PlayerMovementInput",
+    "name": "Player",
     "maps": [
         {
             "name": "Player",
@@ -74,7 +74,7 @@
                 {
                     "name": "",
                     "id": "3d2a1bd2-091d-47ef-8069-4766bb44ed3d",
-                    "path": "<Gamepad>/rightStick",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
